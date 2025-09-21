@@ -1,4 +1,6 @@
 package com.jokefactory.model;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class Joke {
@@ -10,8 +12,12 @@ public class Joke {
     // 增强后的字段
     private String lengthCategory; // short / medium / long
     private List<String> keywords;
+    private List<String> keywordsWithNLP;
+    private String sentiment;
+    private String sentimentWithNLP;
 
     // Getters/Setters
+    @JsonProperty("joke_id")
     public String getJokeId() { return jokeId; }
     public void setJokeId(String jokeId) { this.jokeId = jokeId; }
 
@@ -21,6 +27,7 @@ public class Joke {
     public String getPunchline() { return punchline; }
     public void setPunchline(String punchline) { this.punchline = punchline; }
 
+    @JsonProperty("source_url")
     public String getSourceUrl() { return sourceUrl; }
     public void setSourceUrl(String sourceUrl) { this.sourceUrl = sourceUrl; }
 
@@ -29,6 +36,19 @@ public class Joke {
 
     public List<String> getKeywords() { return keywords; }
     public void setKeywords(List<String> keywords) { this.keywords = keywords; }
+
+    public List<String> getKeywordsWithNLP() { return keywords; }
+    public void setKeywordsWithNLP(List<String> keywords) { this.keywords = keywords; }
+
+    public String getSentiment() { return sentiment; }
+    public void setSentiment(String sentiment) { this.sentiment = sentiment; }
+    public String getSentimentWithNLP() { return sentimentWithNLP; }
+    public void setSentimentWithNLP(String sentimentWithNLP) { this.sentimentWithNLP = sentimentWithNLP; }
+
+    private Double readabilityScore;
+
+    public Double getReadabilityScore() { return readabilityScore; }
+    public void setReadabilityScore(Double readabilityScore) { this.readabilityScore = readabilityScore; }
 
     @Override
     public String toString() {
