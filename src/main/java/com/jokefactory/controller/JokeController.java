@@ -27,6 +27,7 @@ public class JokeController {
                 joke.setSourceUrl(rs.getString("source_url"));
                 joke.setLengthCategory(rs.getString("length_category"));
                 joke.setKeywords(Arrays.asList(rs.getString("keywords").split(",")));
+                joke.setKeywordsWithNLP(Arrays.asList(rs.getString("keywordsWithNLP").split(",")));
                 joke.setSentimentWithNLP(rs.getString("sentimentWithNLP"));
                 joke.setReadabilityScore(rs.getDouble("readabilityScore"));
                 jokes.add(joke);
@@ -52,6 +53,7 @@ public class JokeController {
                 joke.setSourceUrl(rs.getString("source_url"));
                 joke.setLengthCategory(rs.getString("length_category"));
                 joke.setKeywords(Arrays.asList(rs.getString("keywords").split(",")));
+                joke.setKeywordsWithNLP(Arrays.asList(rs.getString("keywordsWithNLP").split(",")));
                 joke.setSentimentWithNLP(rs.getString("sentimentWithNLP"));
                 joke.setReadabilityScore(rs.getDouble("readabilityScore"));
                 return joke;

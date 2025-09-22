@@ -15,7 +15,7 @@ import java.util.Arrays;
 public class App {
     public static void main(String[] args) throws Exception {
         String inputFile = "src/main/resources/ProgrammingJokes.jsonl";
-        String enrichedFile = "src/main/resources/enriched_jokes.jsonl";
+        String enrichedFile = "src/main/resources/enriched_jokes_1.jsonl";
         String dbFile = "jokes.db";
 
         // Step 1: 处理数据

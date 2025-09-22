@@ -18,7 +18,7 @@
       jokes.forEach(j => {
         let li = document.createElement("li");
         li.innerHTML = `<b>${j.setup}</b> - ${j.punchline}
-          <br/> <small>Keywords: ${j.keywords}</small>
+          <small>Keywords: ${(j.keywordsWithNLP || []).join(", ")}</small>
           <br/> <small>Sentiment: ${j.sentimentWithNLP}, Readability: ${j.readabilityScore.toFixed(1)}</small>`;
         list.appendChild(li);
       });
