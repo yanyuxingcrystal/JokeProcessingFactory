@@ -9,6 +9,7 @@
    Maven clean compile
    ```
 ##3. Run app
+   ```bash
    mvn exec:java -Dexec.mainClass="com.jokefactory.App"
    And you will get the output in resources enriched_jokes.jsonl
    ```
