@@ -56,4 +56,33 @@ It includes:
    ```bash
    git clone https://github.com/yourname/joke-factory.git
    cd joke-factory
+2. Install dependencies
+   ```bash
+   mvn clean install
+   ```
+3. Compile the project
+   ```bash
+   mvn clean compile
+   ```
+4. Run the data processing (enrich jokes and store into SQLite)
+   ```bash
+   mvn exec:java -Dexec.mainClass="com.jokefactory.App"
+   ```
+5. Output file:
+   ```bash
+   src/main/resources/enriched_jokes.jsonl
+   ```
+6. Database:
+   ```bash
+   jokes.db
+   ```
+7. Start the Web application
+   ```bash
+   mvn spring-boot:run
+   ```
+8. Open in your browser:
+   ```bash
+   API: http://localhost:8080/jokes
+   Web UI: http://localhost:8080/
+   ```
 
