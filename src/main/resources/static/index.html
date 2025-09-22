@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Claude's Joke Factory</title>
+</head>
+<body>
+<h1>😂 Programming Jokes</h1>
+<button onclick="loadJokes()">Load Jokes</button>
+<ul id="joke-list"></ul>
+
+<script>
+    async function loadJokes() {
+      let res = await fetch("/jokes");
+      let jokes = await res.json();
+
+      let list = document.getElementById("joke-list");
+      list.innerHTML = "";
+      jokes.forEach(j => {
+        let li = document.createElement("li");
+        li.innerHTML = `<b>${j.setup}</b> - ${j.punchline}
+          <br/> <small>Keywords: ${j.keywords}</small>
+          <br/> <small>Sentiment: ${j.sentimentWithNLP}, Readability: ${j.readabilityScore.toFixed(1)}</small>`;
+        list.appendChild(li);
+      });
+    }
+</script>
+</body>
+</html>

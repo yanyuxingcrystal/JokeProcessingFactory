@@ -37,8 +37,8 @@ public class Joke {
     public List<String> getKeywords() { return keywords; }
     public void setKeywords(List<String> keywords) { this.keywords = keywords; }
 
-    public List<String> getKeywordsWithNLP() { return keywords; }
-    public void setKeywordsWithNLP(List<String> keywords) { this.keywords = keywords; }
+    public List<String> getKeywordsWithNLP() { return keywordsWithNLP; }
+    public void setKeywordsWithNLP(List<String> keywordsWithNLP) { this.keywordsWithNLP = keywordsWithNLP; }
 
     public String getSentiment() { return sentiment; }
     public void setSentiment(String sentiment) { this.sentiment = sentiment; }
