@@ -85,4 +85,8 @@ It includes:
    API: http://localhost:8080/jokes
    Web UI: http://localhost:8080/
    ```
+## ⚡ Performance & Concurrency
+- Jokes are processed in **parallel** using a thread pool (leveraging all CPU cores).
+- Enriched jokes are passed via a **BlockingQueue** to a single-threaded DB writer (safe for SQLite).
+- Output JSONL is written with synchronization to avoid race conditions.
 
