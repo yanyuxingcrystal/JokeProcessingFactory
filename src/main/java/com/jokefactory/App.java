@@ -21,6 +21,7 @@ public class App {
                 new SentimentAnalysisDecorator(),
                 new SentimentAnalysisDecoratorWithNLP(),
                 new ReadabilityScoreDecorator()
+//                new AIKeywordExtractorDecorator(System.getenv("OPENAI_API_KEY"))
 
         ));
 

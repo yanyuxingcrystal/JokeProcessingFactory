@@ -13,6 +13,7 @@ public class Joke {
     private String lengthCategory; // short / medium / long
     private List<String> keywords;
     private List<String> keywordsWithNLP;
+    private List<String> keywordsWithAIPrompt;
     private String sentiment;
     private String sentimentWithNLP;
 
@@ -39,6 +40,9 @@ public class Joke {
 
     public List<String> getKeywordsWithNLP() { return keywordsWithNLP; }
     public void setKeywordsWithNLP(List<String> keywordsWithNLP) { this.keywordsWithNLP = keywordsWithNLP; }
+
+    public List<String> getKeywordsWithAIPrompt() { return keywordsWithAIPrompt; }
+    public void setKeywordsWithAIPrompt(List<String> keywordsWithAIPrompt) { this.keywordsWithAIPrompt = keywordsWithAIPrompt; }
 
     public String getSentiment() { return sentiment; }
     public void setSentiment(String sentiment) { this.sentiment = sentiment; }
